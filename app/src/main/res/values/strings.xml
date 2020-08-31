@@ -1,0 +1,7 @@
+<resources>
+    <string name="navigation_assembliess"><font size="30" color="#FFFFFF">A</font></string>
+    <string name="navigation_games" ><font size="30" color="#FFFFFF">+</font></string>
+    <string name="navigation_profiles"><font size="30" color="#FFFFFF">U</font></string>
+    <string name="title"><font size="30" color="#FFFFFF">ASSEMBLY</font></string>
+    <string name="title_activity_home">Home</string>
+</resources>

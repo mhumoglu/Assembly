@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_firstpage">
+
+    <fragment
+        android:id="@+id/navigation_game"
+        android:name="com.example.assembly.ui.game.GameFragment"
+        tools:layout="@layout/fragment_assemblies" />
+
+    <fragment
+        android:id="@+id/navigation_assemblies"
+        android:name="com.example.assembly.ui.assemblies.AssembliesFragment"
+        tools:layout="@layout/fragment_game" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.assembly.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+
+    <fragment
+        android:id="@+id/navigation_firstpage"
+        android:name="com.example.assembly.ui.firstpage.FirstPageFragment"
+        tools:layout="@layout/fragment_firstpage" />
+
+</navigation>
