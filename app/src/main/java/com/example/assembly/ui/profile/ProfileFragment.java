@@ -13,13 +13,17 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.assembly.R;
+import com.example.assembly.ui.firstpage.FirstPageFragment;
+import com.example.assembly.ui.firstpage.FirstPageViewModel;
 
 public class ProfileFragment extends Fragment {
 
     private ProfileViewModel notificationsViewModel;
-
+    private FirstPageViewModel firstPageViewModel;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
+        firstPageViewModel.ct.cancel();
         notificationsViewModel =
                 ViewModelProviders.of(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profile, container, false);

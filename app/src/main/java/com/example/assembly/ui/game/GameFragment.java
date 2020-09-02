@@ -13,13 +13,15 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.assembly.R;
+import com.example.assembly.ui.firstpage.FirstPageViewModel;
 
 public class GameFragment extends Fragment {
 
     private GameViewModel homeViewModel;
-
+    private FirstPageViewModel firstPageViewModel;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        firstPageViewModel.ct.cancel();
         homeViewModel =
                 ViewModelProviders.of(this).get(GameViewModel.class);
         View root = inflater.inflate(R.layout.fragment_game, container, false);

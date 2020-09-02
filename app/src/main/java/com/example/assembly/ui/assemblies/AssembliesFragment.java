@@ -14,13 +14,16 @@ import androidx.lifecycle.ViewModelProviders;
 
 
 import com.example.assembly.R;
+import com.example.assembly.ui.firstpage.FirstPageFragment;
+import com.example.assembly.ui.firstpage.FirstPageViewModel;
 
 public class AssembliesFragment extends Fragment {
 
     private AssembliesViewModel dashboardViewModel;
-
+    private FirstPageViewModel firstPageViewModel;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        firstPageViewModel.ct.cancel();
         dashboardViewModel =
                 ViewModelProviders.of(this).get(AssembliesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_assemblies, container, false);
