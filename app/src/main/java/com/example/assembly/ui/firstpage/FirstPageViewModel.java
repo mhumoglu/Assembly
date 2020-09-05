@@ -16,13 +16,13 @@ public class FirstPageViewModel extends ViewModel {
     public static CountDownTimer ct;
     public FirstPageViewModel() throws ExecutionException, InterruptedException {
         mText = new MutableLiveData<>();
-        ct=new CountDownTimer(Long.MAX_VALUE, 1000) {
+        ct=new CountDownTimer(Long.MAX_VALUE, 10000) {
             @Override
             //OnTick metodu geri sayım süresince yapılacak değişiklikler
             public void onTick(long millisUntilFinished) {
                 String x = null;
                 try {
-                    x = new ResponseTask().execute("http://209.250.237.51:3000/url").get();
+                    x = new ResponseTask().execute("http://209.250.237.51:3000/getStory").get();
                 } catch (ExecutionException e) {
                     e.printStackTrace();
                 } catch (InterruptedException e) {
