@@ -15,6 +15,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 
+import com.example.assembly.ui.login.LoginActivity;
+
 import java.util.Timer;
 
 /**
@@ -71,7 +73,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent mainIntent = new Intent(Home.this,MainActivity.class);
+                Intent mainIntent = new Intent(Home.this, LoginActivity.class);
                 startActivity(mainIntent);
             }
         }, 3000);

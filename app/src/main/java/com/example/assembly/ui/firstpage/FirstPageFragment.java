@@ -1,7 +1,11 @@
 package com.example.assembly.ui.firstpage;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ActionBarContextView;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,9 +19,7 @@ import com.example.assembly.R;
 
 public class FirstPageFragment extends Fragment {
 
-    public static FirstPageFragment newInstance() {
-        return new FirstPageFragment();
-    }
+
 
     private FirstPageViewModel firstPageViewModel;
 
@@ -26,8 +28,8 @@ public class FirstPageFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
             @Nullable Bundle savedInstanceState) {
         firstPageViewModel= ViewModelProviders.of(this).get(FirstPageViewModel.class);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         View root = inflater.inflate(R.layout.fragment_firstpage, container, false);
-
         final TextView textView = root.findViewById(R.id.text_firstpage);
         firstPageViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -36,13 +38,6 @@ public class FirstPageFragment extends Fragment {
             }
         });
         return root;
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        firstPageViewModel = ViewModelProviders.of(this).get(FirstPageViewModel.class);
-        // TODO: Use the ViewModel
     }
 
 

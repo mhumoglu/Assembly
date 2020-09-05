@@ -8,6 +8,70 @@
     android:id="@+id/profile_const"
     >
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical|left|start"
+        android:text="Your Assemblies"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:background="#101010"
+        android:gravity="center|center_vertical"
+        android:text="KISS KISS"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:background="#101010"
+        android:gravity="center|center_vertical"
+        android:text="commissioner thunberg"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="239dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#101010"
+        android:gravity="center_vertical|left|start"
+        android:text="deneme"
+        android:textColor="#FFFFFF"
+        app:layout_constraintHeight_min="34dp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="229dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#101010"
+        android:gravity="center_vertical|left|start"
+        android:text="Bio"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintHeight_min="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="75dp"
@@ -33,7 +97,7 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="186dp"
+        android:layout_width="229dp"
         android:layout_height="35dp"
         android:layout_marginTop="56dp"
         android:layout_weight="1"
@@ -41,11 +105,12 @@
         android:gravity="center_vertical|left|start"
         android:text="Username"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:layout_width="186dp"
+        android:id="@+id/textView5"
+        android:layout_width="239dp"
         android:layout_height="35dp"
         android:layout_marginTop="56dp"
         android:layout_weight="1"
@@ -55,6 +120,17 @@
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical|left|start"
+        android:text="Your Roles"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
